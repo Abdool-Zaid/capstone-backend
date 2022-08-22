@@ -9,7 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
@@ -19,9 +18,22 @@
     "jsonwebtoken": "^8.5.1",
     "mysql": "^2.18.1",
     "netlify": "^12.0.1",
+    "netlify-cli": "^11.4.0",
     "netlify-lambda": "^2.0.15",
     "nodemailer": "^6.7.8",
     "nodemon": "^2.0.19",
     "serverless-http": "^3.0.2"
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdool-Zaid/capstone-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Abdool-Zaid/capstone-backend/issues"
+  },
+  "homepage": "https://github.com/Abdool-Zaid/capstone-backend#readme",
+  "description": ""
 }
