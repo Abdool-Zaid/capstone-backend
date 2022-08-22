@@ -11,9 +11,6 @@ var bodyParser = require("body-parser");
 
 
 const userRoute = require("../routes/userRoute");
-const productsRoute = require("../routes/productsRoute");
-const orderRoute = require("../routes/orderRoute");
-const staffRoute = require("../routes/staffRoute");
 
 
 app.listen(app.get("port"), () => {
@@ -30,9 +27,6 @@ router.get("/", (req, res) => {
 app.use(`/.netlify/functions/api`, router);
 
 router.use("/users", userRoute);
-router.use("/products", productsRoute);
-router.use("/orders", orderRoute);
-router.use("/staff", staffRoute);
 
 module.exports = app;
 module.exports.handler = serverless(app);
