@@ -5,7 +5,7 @@ const serverless = require("serverless-http");
 const router = express.Router();
 const cors = require("cors"); 
 const app = express();
-app.set("port", process.env.PORT ||Math.ceil(Math.random()*9999)); 
+app.set("port", process.env.PORT ||6969); 
 app.use(express.json());
 app.use(cors());
 

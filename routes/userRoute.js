@@ -106,7 +106,7 @@ router.get("/users/verify", (req, res) => {
 });
 router.get("/", (req, res) => {
   try {
-    con.query("SELECT * FROM users", (err, result) => {
+    con.query("SELECT * FROM user", (err, result) => {
       if (err) throw err;
       res.send(result);
     });
