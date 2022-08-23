@@ -130,25 +130,8 @@ router.post("/login", (req, res) => {
       res.status(400).send(error);
     }
   });
-  // router.post("/", (req, res) => {
-    //   const { email, password, full_name, billing_address, phone, user_type } =
-    //     req.body;
-    //   try {
-      //     con.query(
-        //       `INSERT INTO user (email,password,full_name,billing_address,phone,user_type) VALUES ("${email}","${password}","${full_name}","${billing_address}","${phone}","${user_type}")`,
-//       (err, result) => {
-  //         if (err) throw err;
-  //         res.json(`User registered ${full_name}`);
-  //       }
-  //     );
-  //   } catch (error) {
-    //     console.log(error);
-    //     res.status(400).send(error);
-    //   }
-// });
 
-
-router.put("/:id", (req, res) => {
+router.put("/:id", middleware,(req, res) => {
   try {
     const {
       email,
@@ -177,7 +160,7 @@ router.put("/:id", (req, res) => {
   router.delete("/:id", (req, res) => {
     try {
       con.query(
-        `DELETE FROM user WHERE user_id = "${req.params.id}" `,
+        `DELETE FROM user WHERE id = "${req.params.id}" `,
         (err, result) => {
           if (err) throw err;
           res.send(result);
