@@ -116,7 +116,7 @@ router.post("/login", (req, res) => {
     }
   });
   
-  router.get("/:id", (req, res) => {
+  router.get("/:id", middleware, (req, res) => {
     try {
       con.query(
         `SELECT * FROM user WHERE id = ${req.params.id}`,
