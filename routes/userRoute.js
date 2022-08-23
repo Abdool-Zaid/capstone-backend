@@ -29,7 +29,7 @@ router.post("/register", (req, res) => {
     con.query(sql, user, (err, result) => {
       if (err) throw err;
       console.log(result);
-      res.json({msg:`User ${(user.email)} created successfully`});
+      res.json({msg:`User ${(user.username)} created successfully`});
     });
   } catch (error) {
     console.log(error);
@@ -51,8 +51,8 @@ router.post("/login", (req, res) => {
         });
       } else {
         const isMatch = await bcrypt.compare(
-          req.body.password,
-          result[0].password
+          req.body.passwordHash,
+          result[0].passwordHash
           );
           if (!isMatch) {
             res.status(400).json({
