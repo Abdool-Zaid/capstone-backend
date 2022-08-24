@@ -16,7 +16,7 @@ const userMessageRoute = require("../routes/userMessageRoute");
 const userFriendRoute = require("../routes/userFriendRoute");
 const groupRoute = require("../routes/groupRoute");
 const groupPostRoute = require("../routes/groupPostRoute");
-const groupMetaRoute = require("../routes/groupMetaRoute");
+// const groupMetaRoute = require("../routes/groupMetaRoute");
 const groupMessageRoute = require("../routes/userMessageRoute");
 const groupMemberRoute = require("../routes/groupMemberRoute");
 
@@ -38,7 +38,7 @@ router.use("/userMessage", userMessageRoute);
 router.use("/userFriend", userFriendRoute);
 router.use("/group", groupRoute);
 router.use("/groupPost", groupPostRoute);
-router.use("/groupMeta", groupMetaRoute);
+// router.use("/groupMeta", groupMetaRoute);
 router.use("/groupMessage", groupMessageRoute);
 router.use("/groupMember", groupMemberRoute);
 
