@@ -194,13 +194,14 @@ router.put("/:id", middleware,(req, res) => {
           },
         });
         
+        // id	username	email	passwordHash	intro	profile
         var mailData = {
           from: process.env.MAILERUSER,
           to: result[0].email,
           
           subject: "Password Reset",
           html: `<div>
-          <h3>Hi ${result[0].full_name},</h3>
+          <h3>Hi ${result[0].username},</h3>
           <br>
           <marquee behavior="scroll" direction="right">
           
@@ -211,7 +212,6 @@ router.put("/:id", middleware,(req, res) => {
           
           <a href="https://user-images.githubusercontent.com/4998145/52377595-605e4400-2a33-11e9-80f1-c9f61b163c6a.png">
           Click Here to Reset Password
-          user_id = ${result[0].user_id}
           </a>
           <br>
           <p>For any queries feel free to contact us...</p>
@@ -245,4 +245,3 @@ router.put("/:id", middleware,(req, res) => {
 });
 
 module.exports = router;
-// id	username	email	passwordHash	intro	profile
