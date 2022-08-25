@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --ss:1%;
+    --bg:#65ee8e;
+}
+body{
+    background-color: var(--bg);
+}
