@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 const con = require("../lib/db_connection");
+const middleware = require("../middleware/auth");
 
-router.post("/newPost", (req, res) => {
+router.post("/newPost", middleware, (req, res) => {
   try {
     let sql = "INSERT INTO user_post SET ?";
     const {
@@ -70,7 +71,7 @@ router.get("/",  (req, res) => {
             res.status(400).send(error);
           }
         });
-        router.delete("/:id", (req, res) => {
+        router.delete("/:id",  middleware,(req, res) => {
           try {
             con.query(
               `DELETE FROM user_post WHERE id = "${req.params.id}" `,
