@@ -4,6 +4,8 @@ const con = require("../lib/db_connection");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const nodemailer = require("nodemailer");
+const middleware = require("../middleware/auth");
+const { application } = require("express");
 
 router.post("/register", (req, res) => {
   try {
@@ -101,8 +103,6 @@ router.post("/login", (req, res) => {
       }
     });
   });
-  const middleware = require("../middleware/auth");
-  const { application } = require("express");
   
   router.get("/", middleware, (req, res) => {
     try {

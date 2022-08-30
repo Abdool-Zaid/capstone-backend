@@ -25,64 +25,40 @@
             <tbody>
               <tr>
                 <td>GET</td>
-                <td>"/users/"</td>
-                <td></td>
+                <td>"/.netlify/functions/api/users/"</td>
+                <td>requires middleware retrieves all users</td>
               </tr>
               <tr>
                 <td>GET</td>
-                <td>"/users/:id"</td>
-                <td></td>
+                <td>"/.netlify/functions/api/users/:id"</td>
+                <td>requires middleware retrieves single users</td>
               </tr>
               <tr>
                 <td>POST</td>
-                <td>"/users/register"</td>
-                <td></td>
+                <td>"/.netlify/functions/api/users/register"</td>
+                <td>creates new user</td>
               </tr>
               <tr>
                 <td>POST</td>
-                <td>"/users/login"</td>
-                <td></td>
+                <td>"/.netlify/functions/api/users/login"</td>
+                <td>send email + password through body and recieve token</td>
               </tr>
               <tr>
                 <td>GET</td>
                 <td>"/users/verify"</td>
-                <td></td>
+                <td>decrypt token data</td>
               </tr>
               <tr>
                 <td>DELETE</td>
                 <td>"/users/:id"</td>
-                <td></td>
+                <td>removes user from db</td>
               </tr>
               <tr>
                 <td>PUT</td>
                 <td>"/users/:id"</td>
-                <td></td>
+                <td>edits user data</td>
               </tr>
-              <tr>
-                <td>GET</td>
-                <td>"/users/:id/cart"</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>POST</td>
-                <td>"/users/:id/cart"</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>DELETE</td>
-                <td>"/users/:id/cart/:id"</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>PATCH</td>
-                <td>"/users/:id/cart/:id"</td>
-                <td></td>
-              </tr>
-              <tr>
-                <td>DELETE</td>
-                <td>"/users/:id/cart"</td>
-                <td></td>
-              </tr>
+             
             </tbody>
           </table>
         </div>
