@@ -99,7 +99,7 @@ router.post("/login", (req, res) => {
         });
       } else {
         res.status(200);
-        res.send(decodedToken);
+        res.json({decodedToken});
       }
     });
   });
